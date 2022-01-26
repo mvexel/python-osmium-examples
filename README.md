@@ -7,7 +7,7 @@ If you have other useful scripts, please submit a pull request to include them. 
 ## How to install
 
 ```bash
-git clone ...
+git clone git@github.com:mvexel/python-osmium-examples.git
 cd python-osmium-examples
 python3 -m venv venv
 source venv/bin/activate
