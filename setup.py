@@ -6,7 +6,8 @@ setup(
     py_modules=['python-osmium-examples'],
     install_requires=[
         'Click',
-        'osmium'
+        'osmium',
+        'pandas'
     ],
     entry_points={
         'console_scripts': [
