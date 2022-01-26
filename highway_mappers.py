@@ -23,8 +23,8 @@ class MapperCounterHandler(osmium.SimpleHandler):
 
     def way(self, w):
         if 'highway' in w.tags and any(elem in w.tags['highway'] for elem in MAIN_HIGHWAY_KEYS):
-            if w.mapper not in self.mappers:
-                self.mappers.append(w.mapper)
+            if w.user not in self.mappers:
+                self.mappers.append(w.user)
 
 
 class HighwayCounterHandler(osmium.SimpleHandler):
@@ -40,7 +40,7 @@ class HighwayCounterHandler(osmium.SimpleHandler):
         if 'highway' in w.tags and w.tags['highway'] in MAIN_HIGHWAY_KEYS:
             # click.echo("id {} version {} visibe {} tags {}".format(w.id, w.version, w.visible, w.tags['highway']))
             if self.all_versions or w.id not in self.way_ids:
-                self.result.at[w.mapper, w.tags['highway']] += 1
+                self.result.at[w.user, w.tags['highway']] += 1
                 self.way_ids.append(w.id)
                 self.edits_count += 1                
 
