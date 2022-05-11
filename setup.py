@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='python-osmium-examples',
-    version='0.1.1',
+    version='0.1.2',
     py_modules=['python-osmium-examples'],
     install_requires=[
         'Click',
