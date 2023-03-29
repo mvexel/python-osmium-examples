@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='python-osmium-examples',
@@ -9,9 +9,10 @@ setup(
         'osmium',
         'pandas'
     ],
+    packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'count_highway_mappers = highway_mappers:cli',
+            'count_highway_mappers = highway_mapper.highway_mapper:cli',
         ],
     },
 )
